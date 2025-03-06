@@ -1,0 +1,33 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.12.35707.178
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XAFVectorSearch.Module", "XAFVectorSearch.Module\XAFVectorSearch.Module.csproj", "{F86404A8-221B-4081-BBE4-1A27C90AF5A0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XAFVectorSearch.Blazor.Server", "XAFVectorSearch.Blazor.Server\XAFVectorSearch.Blazor.Server.csproj", "{174D5F38-883F-4751-9F2C-7482848180A5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		EasyTest|Any CPU = EasyTest|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F86404A8-221B-4081-BBE4-1A27C90AF5A0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F86404A8-221B-4081-BBE4-1A27C90AF5A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F86404A8-221B-4081-BBE4-1A27C90AF5A0}.EasyTest|Any CPU.ActiveCfg = EasyTest|Any CPU
+		{F86404A8-221B-4081-BBE4-1A27C90AF5A0}.EasyTest|Any CPU.Build.0 = EasyTest|Any CPU
+		{F86404A8-221B-4081-BBE4-1A27C90AF5A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F86404A8-221B-4081-BBE4-1A27C90AF5A0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{174D5F38-883F-4751-9F2C-7482848180A5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{174D5F38-883F-4751-9F2C-7482848180A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{174D5F38-883F-4751-9F2C-7482848180A5}.EasyTest|Any CPU.ActiveCfg = EasyTest|Any CPU
+		{174D5F38-883F-4751-9F2C-7482848180A5}.EasyTest|Any CPU.Build.0 = EasyTest|Any CPU
+		{174D5F38-883F-4751-9F2C-7482848180A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{174D5F38-883F-4751-9F2C-7482848180A5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

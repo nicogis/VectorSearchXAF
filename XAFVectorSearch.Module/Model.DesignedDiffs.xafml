@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application Title="XAFVectorSearch">
+  <NavigationItems>
+    <Items>
+      <Item Id="NIDocuments" ViewId="Documents_ListView" ImageName="Action_Document_Object_Inplace" IsNewNode="True" />
+    </Items>
+  </NavigationItems>
+  <Options>
+    <LayoutManagerOptions RequiredFieldMark="*" />
+  </Options>
+  <SchemaModules>
+    <SchemaModule Name="SystemModule" Version="24.2.3.0" IsNewNode="True" />
+  </SchemaModules>
+  <Validation>
+    <Rules>
+      <RuleRequiredField Id="VRRFFile_Documents" TargetType="XAFVectorSearch.Module.BusinessObjects.Documents" TargetPropertyName="File" TargetContextIDs="Save" IsNewNode="True" />
+    </Rules>
+  </Validation>
+</Application>
