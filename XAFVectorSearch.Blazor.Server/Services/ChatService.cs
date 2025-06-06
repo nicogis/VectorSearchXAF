@@ -36,7 +36,7 @@ public class ChatService(IChatCompletionService chatCompletionService, Tokenizer
 
     public async Task<string> AskQuestionAsync(Guid conversationId, IEnumerable<string> chunks, string question)
     {
-        var chat = CreateChatAsync(chunks, question);
+        var chat = CreateChat(chunks, question);
 
         var answer = await chatCompletionService.GetChatMessageContentAsync(chat, new AzureOpenAIPromptExecutionSettings
         {
@@ -51,7 +51,7 @@ public class ChatService(IChatCompletionService chatCompletionService, Tokenizer
 
     public async IAsyncEnumerable<string> AskStreamingAsync(Guid conversationId, IEnumerable<string> chunks, string question)
     {
-        var chat = CreateChatAsync(chunks, question);
+        var chat = CreateChat(chunks, question);
 
         var answer = new StringBuilder();
         await foreach (var token in chatCompletionService.GetStreamingChatMessageContentsAsync(chat, new AzureOpenAIPromptExecutionSettings
@@ -70,7 +70,7 @@ public class ChatService(IChatCompletionService chatCompletionService, Tokenizer
         await SetChatHistoryAsync(conversationId, question, answer.ToString());
     }
 
-    private ChatHistory CreateChatAsync(IEnumerable<string> chunks, string question)
+    private ChatHistory CreateChat(IEnumerable<string> chunks, string question)
     {
         var chat = new ChatHistory("""
             You can use only the information provided in this chat to answer questions. If you don't know the answer, reply suggesting to refine the question.

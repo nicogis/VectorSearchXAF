@@ -11,7 +11,7 @@ using XAFVectorSearch.Module.Models;
 public class VectorAPIController(IObjectSpaceFactory objectSpaceFactory) : ControllerBase
 {
 
-    readonly IObjectSpaceFactory objectSpaceFactory = objectSpaceFactory;
+    readonly IObjectSpaceFactory _objectSpaceFactory = objectSpaceFactory;
 
     [HttpGet]
     public async Task<IResult> Get(VectorSearchService vectorSearchService)
@@ -50,7 +50,7 @@ public class VectorAPIController(IObjectSpaceFactory objectSpaceFactory) : Contr
             return TypedResults.BadRequest("Document ID is required.");
         }
 
-        using IObjectSpace newObjectSpace = objectSpaceFactory.CreateObjectSpace<Module.BusinessObjects.Documents>();
+        using IObjectSpace newObjectSpace = _objectSpaceFactory.CreateObjectSpace<Module.BusinessObjects.Documents>();
         Module.BusinessObjects.Documents  documents = newObjectSpace.GetObjectByKey<Module.BusinessObjects.Documents>(documentId.Value);
         if (documents == null)
         {

@@ -7,7 +7,6 @@ using Microsoft.Extensions.AI;
 using Microsoft.Extensions.Options;
 using Microsoft.SemanticKernel.Embeddings;
 using Microsoft.SemanticKernel.Text;
-using System.Data;
 using XAFVectorSearch.Blazor.Server.ContentDecoders;
 using XAFVectorSearch.Blazor.Server.Settings;
 using XAFVectorSearch.Module.Models;
